@@ -1,6 +1,16 @@
-<html><body>
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Water Calculator</h2>
+Surface (m²): <input id="s" type="number"><br><br>
+Dose (L/m²): <input id="d" type="number"><br><br>
+<button onclick="calc()">Calculate</button>
+<p id="result"></p>
 <script>
-let surface=100, dose=5;
-let eau=surface*dose;
-document.write("Quantité d'eau : "+eau+" litres");
-</script></body></html>
+function calc(){
+let q=Number(s.value)*Number(d.value);
+result.innerHTML="Water quantity: "+q+" Litres";
+}
+</script>
+</body>
+</html>
