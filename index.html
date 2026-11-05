@@ -1,16 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Lalla HortiAgritech</title>
+<style>
+body{font-family:Arial;background:#edf5ed;margin:0;padding:30px}
+.box{max-width:520px;margin:30px auto;background:white;padding:30px;border-radius:18px;box-shadow:0 4px 18px #bbb}
+header{text-align:center;color:#276b42}
+.logo{font-size:45px}
+h2{margin:8px}
+p{text-align:center;color:#666}
+label{display:block;margin-top:20px;font-weight:bold;color:#345}
+input{width:100%;padding:13px;margin-top:8px;box-sizing:border-box;border:1px solid #bbb;border-radius:8px}
+button{width:100%;padding:14px;margin-top:25px;background:#32834f;color:white;border:0;border-radius:8px;font-size:17px}
+#result{margin-top:20px;padding:18px;background:#e2f5e7;border-radius:10px;text-align:center;color:#276b42;font-weight:bold}
+</style>
+</head>
 <body>
-<h2>Water Calculator</h2>
-Surface (m²): <input id="s" type="number"><br><br>
-Dose (L/m²): <input id="d" type="number"><br><br>
-<button onclick="calc()">Calculate</button>
-<p id="result"></p>
+<div class="box">
+<header>
+<div class="logo">🌱</div>
+<h2>Lalla HortiAgritech</h2>
+<p>Smart Irrigation Water Calculator</p>
+</header>
+<h3>Water Calculation</h3>
+<label>Surface (m²)</label>
+<input id="s" type="number" placeholder="Enter surface">
+<label>Water dose (L/m²)</label>
+<input id="d" type="number" placeholder="Enter dose">
+<button onclick="calc()">Calculate Water</button>
+<div id="result">🌿 Result will appear here</div>
+</div>
 <script>
 function calc(){
-let q=Number(s.value)*Number(d.value);
-result.innerHTML="Water quantity: "+q+" Litres";
+let s=Number(document.getElementById("s").value);
+let d=Number(document.getElementById("d").value);
+let r=document.getElementById("result");
+if(s<=0||d<=0){r.innerHTML="Please enter valid numbers";return;}
+r.innerHTML="💧 Water Quantity: "+(s*d)+" Litres";
 }
 </script>
 </body>
 </html>
+
