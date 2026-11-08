@@ -1,1 +1,8 @@
-
+<!DOCTYPE html>
+<html><head><title>Lalla HortiAgritech</title><style>body{font-family:Arial;background:#edf5ed;padding:30px}.box{max-width:520px;margin:30px auto;background:white;padding:30px;border-radius:18px;box-shadow:0 4px 18px #bbb}header{text-align:center;color:#276b42}.logo{font-size:45px}p{text-align:center;color:#666}label{display:block;margin-top:20px;font-weight:bold}input{width:100%;padding:13px;margin-top:8px;box-sizing:border-box}button{width:100%;padding:14px;margin-top:25px;background:#32834f;color:white;border:0;border-radius:8px}#result{margin-top:20px;padding:18px;background:#e2f5e7;border-radius:10px;text-align:center;color:#276b42}</style></head>
+<body><div class="box"><header><div class="logo">🌱</div><h2>Lalla HortiAgritech</h2><p>Smart Irrigation Water Calculator</p></header><h3>Water Calculation</h3>
+<label>Surface (m²)</label><input id="s" type="number" placeholder="Enter surface">
+<label>Water dose (L/m²)</label><input id="d" type="number" placeholder="Enter dose">
+<button onclick="calc()">Calculate Water</button><div id="result">🌿 Result will appear here</div>
+<script>function calc(){let s=Number(document.getElementById("s").value),d=Number(document.getElementById("d").value);document.getElementById("result").innerHTML=s>0&&d>0?"💧 Water Quantity: "+s*d+" Litres":"Please enter valid numbers";}</script>
+</div></body></html>
