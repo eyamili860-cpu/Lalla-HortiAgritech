@@ -2,80 +2,26 @@
 <html>
 <head>
 <title>Lalla HortiAgritech</title>
-
-<style>
-body {
-    font-family: Arial;
-    background-color: #f4f4f4;
-    text-align: center;
-}
-
-h2 {
-    color: #218c54;
-}
-
-.box {
-    background-color: white;
-    width: 400px;
-    margin: 40px auto;
-    padding: 20px;
-    border: 1px solid #ddd;
-}
-
-label {
-    color: #218c54;
-}
-
-input {
-    padding: 8px;
-    margin: 10px;
-}
-
-button {
-    background-color: #27ae60;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-}
-
-#result {
-    color: #218c54;
-    font-weight: bold;
-}
-</style>
 </head>
-
 <body>
-
-<div class="box">
 <h2>Lalla HortiAgritech</h2>
-<h3>Water Calculator</h3>
-
+<p>Water Calculator</p>
 <label>Surface (m²):</label>
 <input id="s" type="number">
-<br>
-
+<br><br>
 <label>Dose (L/m²):</label>
 <input id="d" type="number">
 <br><br>
-
 <button onclick="calc()">Calculate</button>
-
 <p id="result"></p>
-</div>
-
 <script>
-function calc() {
-    let s = Number(document.getElementById("s").value);
-    let d = Number(document.getElementById("d").value);
-    let eau = s * d;
-
-    document.getElementById("result").innerHTML =
-    "Water Quantity: " + eau + " Litres";
+function calc(){
+let s=Number(document.getElementById("s").value);
+let d=Number(document.getElementById("d").value);
+let eau=s*d;
+document.getElementById("result").innerHTML="Water Quantity: "+eau+" Litres";
 }
 </script>
-
 </body>
 </html>
 
